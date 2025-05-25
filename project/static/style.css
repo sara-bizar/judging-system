@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  font-family: "Vazirmatn", sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 20px;
+  color: #2d2d2d;
+}
+
+h1,
+h3 {
+  text-align: center;
+  color: #202020;
+}
+
+#userText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+input[type="text"] {
+  width: 60%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: #ffffff;
+}
+
+button {
+  padding: 12px 24px;
+  background-color: #10a37f;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0d8c6a;
+}
+
+#output,
+#persent {
+  margin: 30px auto;
+  width: 80%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  font-size: 16px;
+  color: #333;
+}
+
+body {
+  direction: rtl; /* برای راست‌چین کردن کل صفحه */
+  text-align: right;
+  font-family: 'Vazirmatn', sans-serif;
+}
+
+input[type="text"] {
+  direction: rtl; /* راست‌چین کردن متن داخل input */
+  text-align: right;
+}
+
+textarea {
+  direction: rtl;
+  text-align: right;
+}
+
+#userText {
+  display: flex;
+  flex-direction: row-reverse; /* input سمت راست، دکمه سمت چپ */
+  gap: 10px;
+}
+
+

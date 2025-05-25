@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سیستم قضاوت کننده</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h1>سیستم قضاوت کننده</h1>
+    <h3>در این قسمت متن خود را وارد کنید و سپس دکمه ثبت را بزنید.</h3>
+
+    <form method="POST" id="userText">
+        <input type="text" name="user_input" placeholder="متن خود را در این قسمت وارد کنید." value="{{ request.form.get('user_input', '') }}">
+        <button type="submit">ثبت</button>
+    </form>
+
+    <div id="output">
+        {% if result %}
+            <strong>{{ result.article }}</strong>
+            <p>{{ result.text }}</p>
+        {% endif %}
+    </div>
+
+    <div id="persent">
+        {% if score %}
+            <p>درصد شباهت: {{ '%.2f'|format(score * 100) }}٪</p>
+        {% endif %}
+
+        {% if references %}
+            <h4>ارجاع به مواد دیگر:</h4>
+            {% for ref in references %}
+                <strong>{{ ref.article }}</strong>
+                <p>{{ ref.text }}</p>
+                <hr>
+            {% endfor %}
+        {% endif %}
+    </div>
+
+</body>
+</html>
